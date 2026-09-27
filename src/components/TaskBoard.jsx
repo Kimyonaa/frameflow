@@ -58,7 +58,7 @@ export default function TaskBoard({ project, onUpdate, onCreate, onEvidence, bus
       <div className="section-heading">
         <div>
           <h2>From feedback to follow-through.</h2>
-          <p className="muted">A clear next step. An unbroken connection to why it matters.</p>
+          <p className="muted">Tasks and the feedback behind them.</p>
         </div>
         <button className="primary" onClick={onCreate}>
           <Plus size={15} />
@@ -111,7 +111,7 @@ export default function TaskBoard({ project, onUpdate, onCreate, onEvidence, bus
               {!tasks.some((t) => t.status === status) && (
                 <div className="column-empty">
                   {status === 'todo'
-                    ? 'Every good change starts somewhere.'
+                    ? 'No tasks here yet.'
                     : 'Drop a task here, or change its status.'}
                 </div>
               )}

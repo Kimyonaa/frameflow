@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, ArrowRight, Check, Quote, LoaderCircle } from 'lucide-react';
+import { NotebookPen, ArrowRight, Check, Quote, LoaderCircle } from 'lucide-react';
 import { request } from '../api';
 export default function Assistant({ project, mode, onApplied, onEvidence }) {
   const [kind, setKind] = useState('ask'),
@@ -50,10 +50,10 @@ export default function Assistant({ project, mode, onApplied, onEvidence }) {
     <div className="assistant-body">
       <div className="assistant-intro">
         <span className="assistant-orb">
-          <Sparkles size={25} />
+          <NotebookPen size={25} />
         </span>
         <div>
-          <h3>A second pair of eyes.</h3>
+          <h3>Project assistant</h3>
           <p>
             {mode === 'openai'
               ? 'AI suggestions grounded in your project.'
@@ -102,7 +102,7 @@ export default function Assistant({ project, mode, onApplied, onEvidence }) {
         disabled={busy || (kind === 'ask' && !question.trim())}
         onClick={() => generate()}
       >
-        {busy ? <LoaderCircle className="spin" size={16} /> : <Sparkles size={16} />}{' '}
+        {busy ? <LoaderCircle className="spin" size={16} /> : <NotebookPen size={16} />}{' '}
         {busy ? 'Working…' : kind === 'ask' ? 'Find an answer' : 'Draft a proposal'}
       </button>
       {error && (

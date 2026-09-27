@@ -11,7 +11,7 @@ import {
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
-  Sparkles,
+  NotebookPen,
 } from 'lucide-react';
 import AssetView from './AssetView';
 export default function ReviewCanvas({
@@ -261,7 +261,7 @@ export default function ReviewCanvas({
             <span className="live-dot" />
             {compare
               ? 'The same canvas. A different perspective.'
-              : 'Every comment stays connected to the design.'}
+              : 'Click Add a comment, then choose a spot on the design.'}
           </span>
           <button
             className="primary"
@@ -323,7 +323,7 @@ export default function ReviewCanvas({
           </h3>
           <MessageCircle size={18} />
         </div>
-        <p className="feedback-description">Good work starts with a conversation.</p>
+        <p className="feedback-description">Notes on this version.</p>
         <label className="resolved-toggle">
           <input
             type="checkbox"
@@ -442,11 +442,11 @@ export default function ReviewCanvas({
         {!guest && (
           <div className="ai-preview">
             <span>
-              <Sparkles size={17} />
+              <NotebookPen size={17} />
               PROJECT ASSISTANT
             </span>
-            <b>Feedback, with a next step.</b>
-            <p>Draft a plan, triage comments, or ask what is blocking approval.</p>
+            <b>Need to sort through the notes?</b>
+            <p>Turn comments into draft tasks or check what still needs resolving.</p>
             <button className="text-button" onClick={onAssistant}>
               Open assistant <ArrowUpRight size={14} />
             </button>

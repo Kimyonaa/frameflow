@@ -21,7 +21,7 @@ import {
   ArrowRight,
   Check,
   Command,
-  Sparkles,
+  NotebookPen,
   LogOut,
   Search,
   Upload,
@@ -383,12 +383,11 @@ function App() {
         </div>
         <div className="sidebar-bottom">
           <div className="demo-label">
-            <Sparkles size={16} />
-            <b>Built for the whole story.</b>
+            <NotebookPen size={16} />
+            <b>A useful shortcut</b>
             <p>
-              Connect the brief, the feedback,
-              <br />
-              and what ships.
+              Press ⌘ / Ctrl + K to find
+              <br />a project or task.
             </p>
           </div>
           <div className="profile">
@@ -427,7 +426,7 @@ function App() {
           <div className="topbar-actions">
             <span className="session">
               <span />
-              Saved to MongoDB
+              Saved
             </span>
             <button className="tool" onClick={() => setModal('project')}>
               <Plus size={14} />
@@ -440,7 +439,7 @@ function App() {
             <div className="overview-hero">
               <div className="breadcrumb">YOUR CREATIVE SPACE</div>
               <h1>Make room for good work.</h1>
-              <p>Every project. Every conversation. A clear path forward.</p>
+              <p>Your projects, open reviews and upcoming deadlines.</p>
               <div className="overview-stats">
                 <div>
                   <b>{data.projects.length}</b>
@@ -506,7 +505,7 @@ function App() {
                 </div>
                 <div className="title-actions">
                   <button className="tool" onClick={() => setModal('assistant')}>
-                    <Sparkles size={15} />
+                    <NotebookPen size={15} />
                     Assistant
                   </button>
                   {version && (
@@ -606,7 +605,7 @@ function App() {
                       Edit brief
                     </button>
                     <button className="primary" onClick={() => setModal('assistant')}>
-                      <Sparkles size={15} />
+                      <NotebookPen size={15} />
                       Plan with assistant
                     </button>
                   </div>
@@ -663,9 +662,7 @@ function App() {
                 <div className="traceability">
                   <div>
                     <h3>The thread that ties it together.</h3>
-                    <p>
-                      Requirement → feedback → task → version approval. Every decision has a source.
-                    </p>
+                    <p>Follow a requirement through its comments, tasks and approved version.</p>
                   </div>
                   <button className="text-button" onClick={() => setTab('Review')}>
                     Follow the feedback <ArrowRight size={15} />
@@ -710,7 +707,7 @@ function App() {
           </>
         )}
         <footer className="app-footer">
-          FrameFlow · Make feedback count{' '}
+          FrameFlow / Studio workspace{' '}
           <span>
             {data.assistant === 'openai'
               ? 'AI assistant connected'
@@ -878,7 +875,7 @@ function App() {
         </Modal>
       )}
       {modal === 'task' && (
-        <Modal title="Give the next step a name." onClose={closeModal}>
+        <Modal title="Create a task" onClose={closeModal}>
           <form onSubmit={addTask}>
             <label className="field">
               Task title

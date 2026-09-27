@@ -38,8 +38,7 @@ export default function Welcome({ onEnter }) {
       <div className="welcome-grid">
         <section>
           <div className="welcome-kicker">
-            <span />
-            THE WORK BETWEEN FIRST DRAFT & FINAL YES
+            <span />A SHARED DESK FOR DESIGN REVIEWS
           </div>
           <h1>
             Good feedback.
@@ -47,8 +46,7 @@ export default function Welcome({ onEnter }) {
             Less <em>back & forth.</em>
           </h1>
           <p className="welcome-copy">
-            A place for the messy middle. Pin a thought to a design, turn it into a task, and get
-            everyone to the same final version.
+            Pin a note to a design, turn it into a task, and get everyone to the same final version.
           </p>
           {mode === 'welcome' ? (
             <>
@@ -145,15 +143,15 @@ export default function Welcome({ onEnter }) {
           </div>
           <div className="floating-status">
             <Check size={15} />
-            NOTED. LINKED. MOVING FORWARD.
+            NOTE → TASK → DONE
           </div>
         </div>
       </div>
       <div className="studio-process" aria-label="How FrameFlow works">
         <div>
           <small>01 / COLLECT</small>
-          <h2>Start with the why.</h2>
-          <p>A brief worth coming back to. Requirements that stay attached to the work.</p>
+          <h2>Keep the brief close.</h2>
+          <p>Keep the client brief and requirements beside the designs you’re reviewing.</p>
         </div>
         <div>
           <small>02 / MAKE NOTES</small>
@@ -162,13 +160,13 @@ export default function Welcome({ onEnter }) {
         </div>
         <div>
           <small>03 / CLOSE THE LOOP</small>
-          <h2>Give good work a green light.</h2>
+          <h2>Agree on the final version.</h2>
           <p>Follow each note through to a finished task and a clear approval.</p>
         </div>
       </div>
       <footer>
         <span>BRIEF → REVIEW → REFINE → APPROVE</span>
-        <span>Thoughtful work deserves a thoughtful workflow.</span>
+        <span>FrameFlow / Design review workspace</span>
       </footer>
     </div>
   );

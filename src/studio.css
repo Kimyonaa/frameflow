@@ -1093,3 +1093,48 @@ select,
 .linked {
   color: #a7d3b6;
 }
+
+/* Working tools take precedence over decorative promotion. */
+.demo-label {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  border-radius: 0;
+  padding: 18px 6px 0;
+}
+.demo-label > svg {
+  display: none;
+}
+.ai-preview {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  border-radius: 0;
+  margin-top: 25px;
+  padding-inline: 0;
+}
+.ai-preview > span {
+  font:
+    10px 'Courier New',
+    monospace;
+  letter-spacing: 0.7px;
+}
+.ai-preview b {
+  font-size: 12px;
+  font-weight: 500;
+}
+.ai-preview p {
+  font-size: 11px;
+}
+.feedback-description,
+.canvas-toolbar small,
+.canvas-footer > span {
+  font-size: 11px;
+  line-height: 1.6;
+}
+.app-footer {
+  font-size: 10px;
+}
+.floating-status {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
