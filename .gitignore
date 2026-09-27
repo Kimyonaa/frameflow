@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+*.log
+artifacts/
+playwright-report/
+test-results/
+.DS_Store
+
+.env.*
+!.env.example
+PROGRESS.md

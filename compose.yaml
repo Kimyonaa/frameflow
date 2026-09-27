@@ -1,0 +1,25 @@
+services:
+  mongo:
+    image: mongo:8
+    ports:
+      - '127.0.0.1:27017:27017'
+    volumes:
+      - frameflow-data:/data/db
+    healthcheck:
+      test: ['CMD', 'mongosh', '--quiet', '--eval', 'db.adminCommand("ping").ok']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  app:
+    profiles: ['app']
+    build: .
+    ports:
+      - '127.0.0.1:4310:4310'
+    environment:
+      MONGODB_URI: mongodb://mongo:27017/frameflow
+      ALLOWED_ORIGINS: http://127.0.0.1:4310,http://localhost:4310
+    depends_on:
+      mongo:
+        condition: service_healthy
+volumes:
+  frameflow-data:
